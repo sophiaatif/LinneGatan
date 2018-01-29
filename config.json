@@ -28,6 +28,11 @@
 						{
 							"image": "building_icon.png"
 						},
+						"events":
+						{
+							"onClick": [ "action-0"]
+							
+						},	
 						"transform":
 						{
 							"position": { "radius": 200, "theta": 180, "phi": 20 },
@@ -36,8 +41,49 @@
 						}
 					}
 				]
+            },
+			{
+                "uid": "scene-1",
+                "name": "Image flat scene",
+                "slug": "image-flat-scene",
+                "description": "This scene has a flat image media",
+
+                "media":
+                {
+                    "uid": "media-0",
+                    "type": "image",
+
+                    "source":
+                    {
+                        "format": "flat",
+                        "url": "Jarntorget1902.jpg"
+                    }
+                },
+
+                "view":
+                {
+                    "type": "flat",
+                    "options":
+                    {
+                        "repeatX": false,
+                        "repeatY": false
+                    }
+                }
             }
+
         ]
-    }
+    },
+	"actions":
+		[
+			{
+				"uid": "action-0",
+				"target": "viewer.story",
+				"method": 
+				{ 
+					"name": "loadScene",
+					"args": ["scene-1"]
+				}
+			}
+		]
 	
 }
